@@ -1,0 +1,55 @@
+# ===================================================================
+# Dependencies for d_pmbm_net project
+#
+# To install all dependencies, run:
+# pip install -r requirements.txt
+#
+# Note for PyTorch: For GPU support, it is highly recommended to 
+# install PyTorch following the official instructions from their 
+# website to match your CUDA version: https://pytorch.org/get-started/locally/
+# ===================================================================
+
+# --- Core Deep Learning Framework ---
+# PyTorch is the main deep learning library used.
+# torchvision is useful for vision-related transforms and models.
+torch~=2.9.1
+torchvision
+
+# --- Dataset and Scientific Computing ---
+# The official devkit for the NuScenes dataset.
+nuscenes-devkit
+
+# Fundamental package for scientific computing with Python.
+numpy~=2.2.6
+
+# Scientific library for optimization, linear algebra, etc.
+# Often used for metrics like GOSPA (Hungarian algorithm).
+scipy~=1.16.3
+
+# Library for reading and writing YAML files, commonly used for configs.
+pyyaml~=6.0.3
+
+# --- Utilities and Visualization ---
+# Fast, extensible progress bar for Python loops. Very useful for training.
+tqdm~=4.67.1
+
+# The standard library for creating static, animated, and interactive visualizations.
+# Useful for plotting loss curves.
+matplotlib~=3.10.7
+
+# For advanced logging and visualization of the training process (e.g., loss, model graph).
+tensorboard
+
+# Python Imaging Library, for opening, manipulating, and saving many different image file formats.
+Pillow
+
+# A powerful library for computer vision tasks, often used for data augmentation or visualization.
+opencv-python
+
+imageio~=2.37.2
+
+motmetrics pandas
+
+pyquaternion~=0.9.9
+motmetrics~=1.4.0
+pandas~=2.3.3
