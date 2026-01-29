@@ -1,0 +1,31 @@
+# configs/custom_eval_config.yaml
+
+# --- Project & Data Paths ---
+dataroot: "C:/Users/ASUS/Desktop/d_pmbm_net/data/nuscenes"
+checkpoint_dir: "checkpoints"
+log_dir: "logs_custom"
+
+# --- Data Settings ---
+dataset:
+  name: "custom"     
+  seq_len: 'full' 
+
+# --- Model Settings ---
+model:
+  name: "D_PMBM_Net_GNN" 
+  state_dim: 6
+  dynamics_type: "gnn"      # 指定要评估的模型版本 ('gnn' 或 'transformer')
+  predict_covariance: True  # 确保设置为True以进行NEES/NIS评估
+
+# --- Execution Settings ---
+run_training: False         # <-- 不进行训练
+run_evaluation: True        # <-- 只进行评估
+
+# --- Evaluation Settings ---
+evaluate:
+  # 加载在nuScenes上训练好的最优模型
+  checkpoint_path: "checkpoints/d_pmbm_net_best.pth" 
+  # 真值文件由CustomDataset内部加载，这里可以留空
+  gt_json_path: "" 
+  # 保存自定义数据集上的结果
+  results_save_path: "results/custom_data_results_gnn.json"

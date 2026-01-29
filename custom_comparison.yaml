@@ -1,0 +1,16 @@
+# configs/custom_comparison.yaml
+
+dataroot: "/path/to/your/custom_data/" 
+dataset:
+  name: "custom"
+  seq_len: 'full'
+
+run_training: False
+run_evaluation: True
+
+models_to_compare:
+  D-PMBM_GNN: "checkpoints/d_pmbm_net_gnn_best.pth"
+  D-PMBM_Transformer: "checkpoints/d_pmbm_net_transformer_best.pth"
+  # CenterPoint: "results/baselines/centerpoint_custom_preds.json" 
+
+results_dir: "results/custom_comparison"
